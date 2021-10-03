@@ -6,6 +6,9 @@ $p: 16px
 // colours
 $paleBlue: hsl(225, 100%, 94%)
 $brightBlue: hsl(245, 75%, 52%)
+$veryPaleBlue: hsl(225, 100%, 98%)
+$desaturatedBlue: hsl(224, 23%, 55%)
+$darkBlue: hsl(223, 47%, 23%)
 
 body
     margin: 0
@@ -17,9 +20,10 @@ body
     background-repeat: no-repeat
     background-color: $paleBlue
     width: 100%
-    height: 100vh
+    height: 100%
     display: grid
-    grid-template-columns: repeat(3, 1fr)
+    //grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: 20px 1fr 20px
     grid-template-rows: 1fr 8fr 1fr
 
 .container
@@ -27,8 +31,6 @@ body
     grid-row: 2
     // border: white 1px solid
     // box-shadow: 0 0 10px 5px gray
-    display: flex
-    flex-flow: column
     img
         display: block
         width: 100%
@@ -37,3 +39,20 @@ body
 main
     background-color: #ffffff
     border-radius: 0 0 15px 15px
+    display: flex
+    flex-flow: column
+    align-items: center
+    padding: 20px
+    h1
+        font-size: 1.3em
+        font-weight: 900
+        color: $darkBlue
+    .description
+        color: $desaturatedBlue
+    .subscription
+        &-plan
+            & > :first-child
+                color: $darkBlue
+                font-weight: 700
+            & > :last-child
+                color: $desaturatedBlue
